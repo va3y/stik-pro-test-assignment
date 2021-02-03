@@ -1,5 +1,5 @@
 <template>
-  <div>NavMain</div>
+  <div>Санкт-Петербург</div>
 </template>
 
 <script>
