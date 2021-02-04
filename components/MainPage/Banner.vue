@@ -6,13 +6,18 @@
         <div class="dash"></div>
       </div>
       <h1>Новая капсула одежды для дома</h1>
-      <button>смотреть</button>
+      <LargeLink title="смотреть" link="/" />
     </div>
   </section>
 </template>
 
 <script>
-export default {}
+import LargeLink from '@/components/UI/LargeLink'
+export default {
+  components: {
+    LargeLink,
+  },
+}
 </script>
 
 <style scoped>
@@ -21,28 +26,46 @@ span {
 }
 h1 {
   font-size: 16px;
-  margin: 40px 0;
+  margin: 30px 0;
   text-transform: uppercase;
 }
 section {
-  background: url('~assets/images/banner-image.png') no-repeat right;
-  background-size: cover;
   position: relative;
   height: calc(100vh);
+  content: '';
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  top: var(--header-height);
+  background: url('~assets/images/banner-image.png') no-repeat;
+  background-position: 90% 0%;
+  background-size: cover;
 }
+
+@media screen and (max-width: 768px) {
+  section {
+    background-position: 73% 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  section:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
 .title-box {
   position: relative;
-  top: 40%;
-  left: 150px;
+  top: 38%;
+  left: 11%;
   width: 230px;
   height: 200px;
   align-self: center;
 }
-button {
-  text-transform: uppercase;
-  width: 100%;
-  height: 40px;
-}
+
 .dash {
   background-color: white;
   width: 20px;

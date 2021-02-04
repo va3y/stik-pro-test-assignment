@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "nuxt": "^2.14.12"
+    "gsap": "^3.6.0",
+    "nuxt": "^2.14.12",
+    "rellax": "^1.12.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",

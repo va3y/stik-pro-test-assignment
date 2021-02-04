@@ -1,16 +1,18 @@
 <template>
-  <nav>
-    <ul>
-      <li>О нас</li>
-      <li>Instastore</li>
-      <li>Вакансии</li>
-      <li>Мы в Instagram</li>
-      <li>Возврат товара</li>
-      <li>Как оформить заказ</li>
-      <li>Оплата и доставка</li>
-      <li>f.a.q</li>
-    </ul>
-  </nav>
+  <transition name="menu-open">
+    <nav>
+      <ul>
+        <li>О нас</li>
+        <li>Instastore</li>
+        <li>Вакансии</li>
+        <li>Мы в Instagram</li>
+        <li>Возврат товара</li>
+        <li>Как оформить заказ</li>
+        <li>Оплата и доставка</li>
+        <li>f.a.q</li>
+      </ul>
+    </nav>
+  </transition>
 </template>
 
 <script>
@@ -29,6 +31,7 @@ nav {
   padding: 40px 0px;
   display: flex;
   justify-content: center;
+  z-index: 10;
 }
 
 ul {

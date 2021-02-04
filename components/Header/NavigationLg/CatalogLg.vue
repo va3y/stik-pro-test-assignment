@@ -1,28 +1,30 @@
 <template>
-  <div class="nav-box">
-    <nav>
-      <ul>
-        <li>Смотреть все</li>
-        <li>Платья</li>
-        <li>Корсеты и топы</li>
-        <li>Рубашки и блузы</li>
-        <li>Жакеты и жилеты</li>
-        <li>Брюки</li>
-        <li>Юбки</li>
-        <li>Комбинезоны</li>
-        <li>Комплекты</li>
-        <li>Свитшоты и худи</li>
-        <li>Домашняя капсула</li>
-        <li>Аксессуары</li>
-        <li>Base</li>
-      </ul>
-    </nav>
-    <div class="catalog-card">
-      <span>winter 20</span>
-      <div class="dash"></div>
-      <h2>Домашняя капсула</h2>
-    </div>
-  </div>
+  <transition name="menu-open">
+    <div class="nav-box">
+      <nav>
+        <ul>
+          <li>Смотреть все</li>
+          <li>Платья</li>
+          <li>Корсеты и топы</li>
+          <li>Рубашки и блузы</li>
+          <li>Жакеты и жилеты</li>
+          <li>Брюки</li>
+          <li>Юбки</li>
+          <li>Комбинезоны</li>
+          <li>Комплекты</li>
+          <li>Свитшоты и худи</li>
+          <li>Домашняя капсула</li>
+          <li>Аксессуары</li>
+          <li>Base</li>
+        </ul>
+      </nav>
+      <div class="catalog-card">
+        <span>winter 20</span>
+        <div class="dash"></div>
+        <h2>Домашняя капсула</h2>
+      </div>
+    </div></transition
+  >
 </template>
 
 <script>

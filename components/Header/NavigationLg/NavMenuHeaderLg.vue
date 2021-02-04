@@ -31,6 +31,7 @@ ul {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
+  z-index: 20;
 }
 
 li {

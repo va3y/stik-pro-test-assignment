@@ -1,8 +1,8 @@
 <template>
-  <div class="drawer-toggle" @click="$emit('toggleNav')">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
+  <div class="nav-burger" @click="$emit('toggleNav')">
+    <div class="bar first-bar"></div>
+    <div class="bar second-bar"></div>
+    <div class="bar third-bar"></div>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {}
 </script>
 
 <style scoped>
-.drawer-toggle {
+.nav-burger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

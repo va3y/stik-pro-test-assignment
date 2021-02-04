@@ -1,33 +1,45 @@
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.5s;
-  transform-origin: 50% 50%;
+.menu-open-enter-active,
+.menu-open-leave-active {
+  transition: all 1s ease-out;
 }
 
-.page-enter,
-.page-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
+.menu-open-enter {
+  transform: translateY(-100vh);
 }
 
-.roll-enter-active,
-.roll-leave-active {
-  transition: all 0.5s;
-  transform-origin: 50% 50%;
+.menu-open-leave-to {
+  transform: translateY(-100vh);
 }
 
-.roll-enter,
-.roll-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
+
+
+.nav-root-leave-active,
+.nav-root-enter-active {
+  transition: all .5s ease-out;
 }
 
-.layout-enter-active,
-.layout-leave-active {
-  transition: opacity 0.5s;
+.nav-root-leave-to {
+  transform: translateX(-100vw);
 }
 
-.layout-enter,
-.layout-leave-active {
-  opacity: 0;
+.nav-root-enter {
+  transform: translateX(-100vw);
+}
+
+
+
+
+.swipe-enter-active,
+.swipe-active,
+.swipe-leave-active,
+.swipe-leave {
+  transition: all .5s ease-out;
+}
+
+.swipe-enter {
+  transform: translateX(100vw);
+}
+
+.swipe-leave-to {
+  transform: translateX(100vw);
 }

@@ -8,7 +8,6 @@
     />
     <NavMenuLg v-show="displayNav" class="lg no-margin" />
     <CatalogLg v-show="displayCatalog" class="lg no-margin" />
-
     <NavMenuSm
       v-show="displayNav"
       :display-nav="displayNav"
@@ -32,6 +31,7 @@ import LogoVector from '@/components/UI/LogoVector'
 import SearchIcon from '@/components/UI/IconsSvg/SearchIcon'
 import StarIcon from '@/components/UI/IconsSvg/StarIcon'
 import ShopIcon from '@/components/UI/IconsSvg/ShopIcon'
+import UserIcon from '@/components/UI/IconsSvg/UserIcon.vue'
 
 import LangSelector from '@/components/Header/LangSelector.vue'
 import LocationSelector from '@/components/Header/LocationSelector'
@@ -39,7 +39,6 @@ import NavMenuHeaderLg from '@/components/Header/NavigationLg/NavMenuHeaderLg'
 import NavMenuLg from '@/components/Header/NavigationLg/NavMenuLg'
 import CatalogLg from '@/components/Header/NavigationLg/CatalogLg'
 import NavMenuSm from '@/components/Header/NavigationSm/NavMenuSm'
-import UserIcon from '../UI/IconsSvg/UserIcon.vue'
 
 export default {
   components: {
@@ -64,18 +63,6 @@ export default {
 }
 </script>
 
-<style>
-:root {
-  --header-height: 86px;
-}
-
-@media screen and (max-width: 375px) {
-  :root {
-    --header-height: 50px;
-  }
-}
-</style>
-
 <style scoped>
 .right-icons {
   display: flex;
@@ -95,7 +82,7 @@ export default {
 
 header {
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   display: flex;
   background-color: black;
   height: var(--header-height);

@@ -9,14 +9,19 @@
     </div>
     <ul>
       <li>
-        <SearchIcon />
-        <SearchField class="search-box" />
+        <div>
+          <SearchIcon />
+          <SearchField class="search-box" />
+        </div>
       </li>
       <li>
         <a href="/">New</a>
       </li>
       <li>
-        <span @click="$emit('openCatalog')"> Каталог </span>
+        <div @click="$emit('openCatalog')">
+          <span> Каталог </span>
+          <Arrow class="arrow" />
+        </div>
       </li>
       <li>
         <a href="/"> Скоро</a>
@@ -43,7 +48,10 @@
         <a href="/"> Мы в Instagram</a>
       </li>
       <li>
-        <span @click="$emit('openBuyersInfo')"> Покупателям</span>
+        <div @click="$emit('openBuyersInfo')">
+          <span> Покупателям</span>
+          <Arrow class="arrow" />
+        </div>
       </li>
     </ul>
   </div>
@@ -54,6 +62,7 @@ import LocationSelector from '@/components/Header/LocationSelector'
 import SearchIcon from '@/components/UI/IconsSvg/SearchIcon'
 import PaperPlaneIcon from '@/components/UI/IconsSvg/PaperPlaneIcon'
 import SearchField from '@/components/UI/SearchField'
+import Arrow from '@/components/UI/IconsSvg/Arrow.vue'
 
 export default {
   components: {
@@ -61,6 +70,7 @@ export default {
     SearchIcon,
     PaperPlaneIcon,
     SearchField,
+    Arrow,
   },
 }
 </script>
@@ -69,7 +79,9 @@ export default {
 .search-box {
   margin-left: 15px;
 }
-span {
-  cursor: pointer;
+.arrow {
+  transform: rotate(-180deg);
+  position: absolute;
+  right: 10%;
 }
 </style>
