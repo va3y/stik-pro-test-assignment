@@ -1,0 +1,33 @@
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s;
+  transform-origin: 50% 50%;
+}
+
+.page-enter,
+.page-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.roll-enter-active,
+.roll-leave-active {
+  transition: all 0.5s;
+  transform-origin: 50% 50%;
+}
+
+.roll-enter,
+.roll-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
+}
+
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
+}

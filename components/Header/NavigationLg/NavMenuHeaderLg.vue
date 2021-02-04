@@ -1,25 +1,23 @@
 <template>
   <nav>
-    <li>
-      <ul>
-        New
-      </ul>
-      <ul @click="$emit('toggleCatalog')">
-        Каталог
-      </ul>
-      <ul>
-        Скоро
-      </ul>
-      <ul>
-        Скидки
-      </ul>
-      <ul>
-        Lookbook
-      </ul>
-      <ul>
-        Сертификаты
-      </ul>
-    </li>
+    <ul>
+      <li>
+        <a href="/">New</a>
+      </li>
+      <li @mouseover="$emit('toggleCatalog')">Каталог</li>
+      <li>
+        <a href="/"> Скоро</a>
+      </li>
+      <li>
+        <a href="/"> Скидки</a>
+      </li>
+      <li>
+        <a href="/"> Lookbook</a>
+      </li>
+      <li>
+        <a href="/"> Сертификаты</a>
+      </li>
+    </ul>
   </nav>
 </template>
 
@@ -28,20 +26,16 @@ export default {}
 </script>
 
 <style scoped>
-nav {
-  display: inline;
-  position: static;
-}
-
-@media screen and (max-width: 768px) {
-  nav {
-    display: none;
-  }
-}
-
-ul,
-li {
-  display: inline-block;
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   text-transform: uppercase;
+}
+
+li {
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 2%;
 }
 </style>

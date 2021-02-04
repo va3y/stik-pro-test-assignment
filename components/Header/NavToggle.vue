@@ -14,15 +14,15 @@ export default {}
 .drawer-toggle {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-self: center;
-  height: 40%;
-  width: 35px;
+  height: 17px;
+  width: 30px;
   cursor: pointer;
 }
 
 .bar {
-  width: 90%;
+  width: 100%;
   height: 1px;
   background-color: white;
 }

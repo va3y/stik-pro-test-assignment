@@ -14,3 +14,5 @@
     />
   </svg>
 </template>
+
+<style></style>

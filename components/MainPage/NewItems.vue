@@ -13,7 +13,7 @@ export default {}
 <style scoped>
 .container {
   display: flex;
-  height: 100vh;
+  height: calc(100vh);
   filter: brightness(60%);
 }
 

@@ -1,31 +1,15 @@
 <template>
   <nav>
-    <li>
-      <ul>
-        О нас
-      </ul>
-      <ul>
-        Instastore
-      </ul>
-      <ul>
-        Вакансии
-      </ul>
-      <ul>
-        Мы в Instagram
-      </ul>
-      <ul>
-        Возврат товара
-      </ul>
-      <ul>
-        Как оформить заказ
-      </ul>
-      <ul>
-        Оплата и доставка
-      </ul>
-      <ul>
-        f.a.q
-      </ul>
-    </li>
+    <ul>
+      <li>О нас</li>
+      <li>Instastore</li>
+      <li>Вакансии</li>
+      <li>Мы в Instagram</li>
+      <li>Возврат товара</li>
+      <li>Как оформить заказ</li>
+      <li>Оплата и доставка</li>
+      <li>f.a.q</li>
+    </ul>
   </nav>
 </template>
 
@@ -35,8 +19,9 @@ export default {}
 
 <style scoped>
 nav {
-  position: absolute;
+  position: fixed;
   top: 86px;
+  left: 0;
   background: black;
   opacity: 0.95;
   width: 100%;
@@ -46,7 +31,7 @@ nav {
   justify-content: center;
 }
 
-li {
+ul {
   height: 100%;
   width: 40%;
   display: flex;
@@ -54,7 +39,7 @@ li {
   flex-wrap: wrap;
 }
 
-ul {
+li {
   padding: 15px 0px;
   text-transform: uppercase;
 }
