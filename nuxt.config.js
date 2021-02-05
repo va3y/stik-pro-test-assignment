@@ -29,7 +29,7 @@ export default {
         href: '/favicons/favicon-96.ico',
         sizes: '96x96',
       },
-      // fireпfox грузит 192 как самую большую и получается не очень
+      // fireпfox всегда грузит 192 как самую большую и получается не очень
       // {
       //   rel: 'icon',
       //   type: 'image/x-icon',
@@ -67,5 +67,7 @@ export default {
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['gsap'],
+  },
 }

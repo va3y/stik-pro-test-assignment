@@ -3,7 +3,7 @@
     <NavMenuLg v-show="$store.state.navOpen" class="lg no-margin" />
     <NavMenuSm v-show="$store.state.navOpen" class="sm no-margin" />
     <CatalogLg v-show="$store.state.catalogOpen" class="lg no-margin" />
-    <div class="header-content">
+    <div id="header-content" class="header-content">
       <LogoVector
         v-if="$store.state.smMenuPage === 'root'"
         width="170"
@@ -71,7 +71,7 @@ export default {
   methods: {
     makeTransparentOnScroll() {
       window.onscroll = () => {
-        if (document.documentElement.scrollTop >= 150) {
+        if (document.documentElement.scrollTop >= 200) {
           document.getElementById('header-content').style.background =
             'rgba(0, 0, 0, 0.5)'
         } else {

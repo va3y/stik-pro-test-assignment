@@ -1,5 +1,5 @@
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js'
+import { ScrollTrigger } from 'gsap/ScrollTrigger.js'
 
 const pageOpen = function () {
   const pageOpenTimeline = gsap.timeline()
