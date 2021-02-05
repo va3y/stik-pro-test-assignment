@@ -1,6 +1,6 @@
 <template>
   <div class="preload">
-    <LogoVector width="60vw" height="60vw" class="logo-preload" />
+    <LogoVector class="logo-preload" />
   </div>
 </template>
 
@@ -26,5 +26,10 @@ div {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.logo-preload {
+  width: 60vw;
+  height: 60vh;
 }
 </style>

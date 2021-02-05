@@ -19,11 +19,11 @@ export default {
     PreLoader,
   },
   mounted() {
+    GsapAnimatiions.pageOpen()
+    GsapAnimatiions.loadParallax()
     setTimeout(() => {
       this.$store.commit('closePreload')
     }, 3000)
-    GsapAnimatiions.pageOpen()
-    GsapAnimatiions.loadParallax()
   },
 }
 </script>
