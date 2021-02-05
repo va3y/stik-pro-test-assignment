@@ -28,7 +28,7 @@ export default { pageOpen, loadParallax }
 // не хватило времени полностью разобраться(
 // const openSmMenu = function () {
 //   gsap.from('.nav-sm', { yPercent: -120, duration: 1 })
-//   console.log('opening')
+//   .log('opening')
 // }
 
 // const closeSmMenu = function () {
