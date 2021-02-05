@@ -1,6 +1,6 @@
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger.js'
-gsap.registerPlugin(ScrollTrigger)
+// не подгружает при диплое
+// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js'
 
 const pageOpen = function () {
   const pageOpenTimeline = gsap.timeline()
@@ -16,12 +16,13 @@ const pageOpen = function () {
 }
 
 const loadParallax = function () {
-  gsap.to('.banner', {
-    backgroundPositionY: `200px`,
-    scrollTrigger: {
-      trigger: 'section-2',
-      scrub: true,
-    },
-  })
+  // gsap.registerPlugin(ScrollTrigger)
+  // gsap.to('.banner', {
+  //   backgroundPositionY: `200px`,
+  //   scrollTrigger: {
+  //     trigger: 'section-2',
+  //     scrub: true,
+  //   },
+  // })
 }
 export default { pageOpen, loadParallax }
