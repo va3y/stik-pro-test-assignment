@@ -18,7 +18,7 @@ a {
   text-transform: uppercase;
   width: 100%;
   height: 40px;
-  border: 1px solid white;
+  border: 1.5px solid white;
   padding-top: 10px;
 }
 </style>

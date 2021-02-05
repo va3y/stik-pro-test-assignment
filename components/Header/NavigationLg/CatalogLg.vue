@@ -1,6 +1,6 @@
 <template>
   <transition name="menu-open">
-    <div class="nav-box">
+    <div class="nav-box" @mouseout="$store.commit('closeCatalog')">
       <nav>
         <ul>
           <li>Смотреть все</li>
@@ -23,8 +23,8 @@
         <div class="dash"></div>
         <h2>Домашняя капсула</h2>
       </div>
-    </div></transition
-  >
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -39,6 +39,7 @@ export default {}
   width: 100%;
   height: 437px;
   display: flex;
+  z-index: 10;
 }
 
 nav {
@@ -53,11 +54,14 @@ ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  height: 350px;
+  margin-top: 40px;
+  margin-left: calc(23vw + 60px);
+  column-gap: 50%;
 }
 
 li {
   padding: 15px 0px;
-  text-transform: uppercase;
 }
 
 .catalog-card {

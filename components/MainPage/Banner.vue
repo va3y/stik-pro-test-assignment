@@ -1,11 +1,11 @@
 <template>
-  <section>
+  <section class="banner">
     <div class="title-box">
-      <div class="subtitle">
+      <div class="subtitle ascend-on-loading">
         <span>winter 20/21</span>
         <div class="dash"></div>
       </div>
-      <h1>Новая капсула одежды для дома</h1>
+      <h1 class="ascend-on-loading">Новая капсула одежды для дома</h1>
       <LargeLink title="смотреть" link="/" />
     </div>
   </section>
@@ -28,23 +28,24 @@ h1 {
   font-size: 16px;
   margin: 30px 0;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 150%;
 }
 section {
   position: relative;
-  height: calc(100vh);
-  content: '';
-  position: relative;
-  height: 100vh;
+  height: calc(100vh - var(--header-height));
   width: 100%;
   top: var(--header-height);
+  margin-bottom: var(--header-height);
   background: url('~assets/images/banner-image.png') no-repeat;
-  background-position: 90% 0%;
+  background-position-x: 100%;
   background-size: cover;
+  display: flex;
 }
 
 @media screen and (max-width: 768px) {
   section {
-    background-position: 73% 100%;
+    background-position-x: 73%;
   }
 }
 @media screen and (max-width: 375px) {
@@ -58,11 +59,10 @@ section {
 }
 
 .title-box {
-  position: relative;
-  top: 38%;
+  position: absolute;
   left: 11%;
-  width: 230px;
-  height: 200px;
+  width: 241px;
+  height: 164px;
   align-self: center;
 }
 

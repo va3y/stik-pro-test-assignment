@@ -1,5 +1,6 @@
 <template>
   <main>
+    <PreLoader v-if="this.$store.state.isLoading" />
     <Banner />
     <NewItems />
   </main>
@@ -8,15 +9,21 @@
 <script>
 import Banner from '@/components/MainPage/Banner'
 import NewItems from '@/components/MainPage/NewItems'
-import { gsap } from 'gsap'
+import GsapAnimatiions from '@/assets/styles/GsapAnimations'
+import PreLoader from '@/components/Preloader'
 
 export default {
   components: {
     Banner,
     NewItems,
+    PreLoader,
   },
   mounted() {
-    gsap.fromTo('main', { opacity: 0 }, { opacity: 1, duration: 1 })
+    setTimeout(() => {
+      this.$store.commit('closePreload')
+    }, 3000)
+    GsapAnimatiions.pageOpen()
+    GsapAnimatiions.loadParallax()
   },
 }
 </script>

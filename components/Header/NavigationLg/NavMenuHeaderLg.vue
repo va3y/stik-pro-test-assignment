@@ -4,7 +4,7 @@
       <li>
         <a href="/">New</a>
       </li>
-      <li @mouseover="$emit('toggleCatalog')">Каталог</li>
+      <li @mouseenter="$store.commit('openCatalog')">Каталог</li>
       <li>
         <a href="/"> Скоро</a>
       </li>
@@ -26,17 +26,18 @@ export default {}
 </script>
 
 <style scoped>
+nav {
+  width: 550px;
+}
+
 ul {
   width: 100%;
   display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  z-index: 20;
 }
 
 li {
   cursor: pointer;
   font-weight: 600;
-  margin: 0 2%;
+  margin-right: 4%;
 }
 </style>

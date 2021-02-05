@@ -29,14 +29,13 @@ nav {
   width: 100%;
   height: 303px;
   padding: 40px 0px;
-  display: flex;
-  justify-content: center;
   z-index: 10;
 }
 
 ul {
+  margin-left: calc(23vw + 60px);
+  width: 50%;
   height: 100%;
-  width: 40%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -44,6 +43,5 @@ ul {
 
 li {
   padding: 15px 0px;
-  text-transform: uppercase;
 }
 </style>

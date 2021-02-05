@@ -1,7 +1,7 @@
 <template>
   <transition name="swipe">
     <div>
-      <SecondLevelHeader @goBack="$emit('goBack')" />
+      <SecondLevelHeader @goBack="$store.commit('changeSmMenuPage', 'root')" />
       <ul>
         <li>
           <a href="/">Оплата и доставка</a>

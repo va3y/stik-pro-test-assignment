@@ -1,32 +1,12 @@
 <template>
   <transition name="menu-open">
     <nav class="nav-sm">
-      <SecondLevelCatalog
-        v-show="showCatalog"
-        @goBack="
-          showCatalog = false
-          showRoot = true
-        "
-      />
+      <SecondLevelCatalog v-show="$store.state.smMenuPage === 'catalog'" />
       <SecondLevelBuyersInfo
-        v-show="showBuyersInfo"
-        @goBack="
-          showBuyersInfo = false
-          showRoot = true
-        "
+        v-show="$store.state.smMenuPage === 'buyersInfo'"
       />
       <transition name="nav-root">
-        <NavRoot
-          v-show="showRoot"
-          @openCatalog="
-            showCatalog = !showCatalog
-            showRoot = false
-          "
-          @openBuyersInfo="
-            showBuyersInfo = !showBuyersInfo
-            showRoot = false
-          "
-        />
+        <NavRoot v-show="$store.state.smMenuPage === 'root'" />
       </transition>
     </nav>
   </transition>
@@ -43,9 +23,6 @@ export default {
     SecondLevelCatalog,
     SecondLevelBuyersInfo,
   },
-  props: {
-    displayNav: Boolean,
-  },
   data() {
     return {
       showCatalog: false,
@@ -53,9 +30,14 @@ export default {
       showRoot: true,
     }
   },
+  computed: {
+    navOpen() {
+      return this.$store.state.navOpen
+    },
+  },
   // отключить прокрутку, если меню открылось на телефоне
   watch: {
-    displayNav(newVal) {
+    navOpen(newVal) {
       const isSm = document.documentElement.clientWidth <= 1079
       if (newVal && isSm) {
         document.body.style.overflow = 'hidden'
@@ -74,6 +56,7 @@ nav >>> ul {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  letter-spacing: 0.1em;
 }
 
 nav >>> li {
@@ -106,6 +89,7 @@ nav >>> .header-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: capitalize;
 }
 
 nav {

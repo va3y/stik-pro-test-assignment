@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container section-2">
     <div class="card card-1">
       <div class="subtitle">
         <h2>Новинки</h2>
@@ -42,8 +42,15 @@ h2 {
 
 .container {
   display: flex;
-  height: calc(100vh);
-  filter: brightness(60%);
+  height: 100vh;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .card {
@@ -65,7 +72,7 @@ h2 {
   background-image: url('~assets/images/black-nightie.png');
   background-position: 30% 0%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 550px) {
   .card-2 {
     display: none;
   }

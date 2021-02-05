@@ -43,3 +43,20 @@
 .swipe-leave-to {
   transform: translateX(100vw);
 }
+
+
+
+.loading-enter-active,
+.loading-active,
+.loading-leave-active,
+.loading-leave {
+  transition: all .5s ease-out;
+}
+
+.loading-enter {
+  transform: translateX(100vw);
+}
+
+.loading-leave-to {
+  transform: translateX(100vw);
+}

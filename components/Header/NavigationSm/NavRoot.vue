@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header-block">
-      <div>
+      <div class="location-selector-box">
         <PaperPlaneIcon />
         <LocationSelector />
       </div>
@@ -18,7 +18,7 @@
         <a href="/">New</a>
       </li>
       <li>
-        <div @click="$emit('openCatalog')">
+        <div @click="$store.commit('changeSmMenuPage', 'catalog')">
           <span> Каталог </span>
           <Arrow class="arrow" />
         </div>
@@ -48,7 +48,7 @@
         <a href="/"> Мы в Instagram</a>
       </li>
       <li>
-        <div @click="$emit('openBuyersInfo')">
+        <div @click="$store.commit('changeSmMenuPage', 'buyersInfo')">
           <span> Покупателям</span>
           <Arrow class="arrow" />
         </div>
@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import LocationSelector from '@/components/Header/LocationSelector'
+import LocationSelector from '@/components/UI/LocationSelector'
 import SearchIcon from '@/components/UI/IconsSvg/SearchIcon'
 import PaperPlaneIcon from '@/components/UI/IconsSvg/PaperPlaneIcon'
 import SearchField from '@/components/UI/SearchField'
@@ -76,6 +76,11 @@ export default {
 </script>
 
 <style scoped>
+.location-selector-box {
+  display: flex;
+  column-gap: 10px;
+}
+
 .search-box {
   margin-left: 15px;
 }
