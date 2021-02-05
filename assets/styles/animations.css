@@ -1,6 +1,6 @@
 .menu-open-enter-active,
 .menu-open-leave-active {
-  transition: all 1s ease-out;
+  transition: all 1s ease;
 }
 
 .menu-open-enter {

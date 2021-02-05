@@ -9,9 +9,10 @@ const pageOpen = function () {
     .to('.preload', {
       yPercent: -100,
       duration: 2,
-      ease: 'back.inOut',
+      ease: 'back.in',
     })
     .from('.ascend-on-loading', { y: 100, duration: 1, opacity: 0 })
+    .from('.header-content', { opacity: 0, duration: 1 })
 }
 
 const loadParallax = function () {
@@ -24,20 +25,3 @@ const loadParallax = function () {
   })
 }
 export default { pageOpen, loadParallax }
-
-// не хватило времени полностью разобраться(
-// const openSmMenu = function () {
-//   gsap.from('.nav-sm', { yPercent: -120, duration: 1 })
-//   .log('opening')
-// }
-
-// const closeSmMenu = function () {
-//   gsap.to('.nav-sm', { yPercent: -120, duration: 1 })
-//   console.log('closing')
-// }
-
-// const toggleNavBurger = function () {
-//   gsap.to('.second-bar', { opacity: 0, duration: 1 })
-//   gsap.to('.first-bar', { y: 8, rotation: 45, duration: 1 })
-//   gsap.to('.third-bar', { y: -8, rotation: -45, duration: 1 })
-// }

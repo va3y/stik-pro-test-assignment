@@ -37,7 +37,6 @@ ul {
 
 li {
   cursor: pointer;
-  font-weight: 600;
   margin-right: 4%;
 }
 </style>

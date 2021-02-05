@@ -15,9 +15,11 @@ const createStore = () => {
       toggleNav(state) {
         state.navOpen = !state.navOpen
         state.smMenuPage = 'root'
+        state.catalogOpen = false
       },
       openCatalog(state) {
         state.catalogOpen = true
+        state.navOpen = false
       },
       closeCatalog(state) {
         state.catalogOpen = false

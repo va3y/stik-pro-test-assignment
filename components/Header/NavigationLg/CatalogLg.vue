@@ -1,6 +1,6 @@
 <template>
   <transition name="menu-open">
-    <div class="nav-box" @mouseout="$store.commit('closeCatalog')">
+    <div class="nav-box" @mouseleave="$store.commit('closeCatalog')">
       <nav>
         <ul>
           <li>Смотреть все</li>
@@ -19,9 +19,13 @@
         </ul>
       </nav>
       <div class="catalog-card">
-        <span>winter 20</span>
-        <div class="dash"></div>
-        <h2>Домашняя капсула</h2>
+        <div>
+          <div class="subtitle">
+            <div class="">winter 20</div>
+            <div class="dash"></div>
+          </div>
+          <h2>Домашняя капсула</h2>
+        </div>
       </div>
     </div>
   </transition>
@@ -57,11 +61,17 @@ ul {
   height: 350px;
   margin-top: 40px;
   margin-left: calc(23vw + 60px);
-  column-gap: 50%;
+  column-gap: 40%;
 }
 
 li {
   padding: 15px 0px;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin-top: 32px;
+  letter-spacing: 0.05em;
 }
 
 .catalog-card {
@@ -69,5 +79,21 @@ li {
   background-size: cover;
   opacity: 1;
   width: 30%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 86px;
+  padding-left: 40px;
+}
+
+.dash {
+  width: 20px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
 }
 </style>

@@ -50,11 +50,25 @@ export default {
 </script>
 
 <style scoped>
-nav >>> ul {
+nav {
+  position: fixed;
+  top: var(--header-height);
   width: 100%;
+  height: calc(100vh - var(--header-height));
+  z-index: 10;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: rgba(0, 0, 0, 0.93);
+}
+
+nav * {
+  position: absolute;
+  width: 100%;
+}
+
+nav >>> ul {
   display: flex;
   flex-direction: column;
-  align-content: center;
   align-items: center;
   letter-spacing: 0.1em;
 }
@@ -62,9 +76,11 @@ nav >>> ul {
 nav >>> li {
   height: 50px;
   text-align: center;
-  text-transform: uppercase;
   width: 90%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+nav >>> li:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 nav >>> li a,
@@ -73,41 +89,16 @@ nav >>> li div {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-content: center;
   align-items: center;
   cursor: pointer;
 }
 
-nav >>> li:first-of-type {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
 nav >>> .header-block {
-  margin: auto;
-  width: 90%;
+  margin: 0 5%;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
-}
-
-nav {
-  position: fixed;
-  left: 0;
-  top: var(--header-height);
-  width: 100%;
-  height: calc(100vh - var(--header-height));
-  z-index: 10;
-  overflow-y: scroll;
-  overflow-x: hidden;
-
-  /* точно 93%? */
-  background: rgba(0, 0, 0, 0.93);
-}
-
-nav * {
-  position: absolute;
-  width: 100%;
 }
 </style>

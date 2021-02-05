@@ -1,8 +1,8 @@
 <template>
   <header>
-    <NavMenuLg v-show="$store.state.navOpen" class="lg no-margin" />
-    <NavMenuSm v-show="$store.state.navOpen" class="sm no-margin" />
-    <CatalogLg v-show="$store.state.catalogOpen" class="lg no-margin" />
+    <NavMenuLg v-show="$store.state.navOpen" class="lg" />
+    <NavMenuSm v-show="$store.state.navOpen" class="sm" />
+    <CatalogLg v-show="$store.state.catalogOpen" class="lg" />
     <div id="header-content" class="header-content">
       <LogoVector
         v-if="$store.state.smMenuPage === 'root'"
@@ -85,6 +85,14 @@ export default {
 </script>
 
 <style scoped>
+header {
+  position: fixed;
+  background-color: black;
+  height: var(--header-height);
+  width: 100%;
+  z-index: 20;
+}
+
 .header-content {
   position: fixed;
   background-color: black;
@@ -93,6 +101,7 @@ export default {
   padding: 0px 2.5%;
   display: flex;
   align-items: center;
+  align-content: center;
   z-index: 20;
 }
 
@@ -102,26 +111,17 @@ export default {
   margin-left: auto;
   width: 25%;
   justify-content: space-between;
-  flex-shrink: 5;
 }
 
 .nav-toggle {
-  display: flex;
-  justify-content: flex-end;
-  width: max-content;
   margin-right: 30px;
 }
 
 .menu-and-toggle {
   position: absolute;
   left: 23%;
-  margin-left: auto;
   display: flex;
   align-items: center;
-}
-
-.no-margin {
-  margin: 0;
 }
 
 .second-level-title {
@@ -136,10 +136,6 @@ export default {
 
 .sm {
   display: none;
-}
-
-.logo {
-  padding: 0 10px;
 }
 
 @media screen and (max-width: 1250px) {

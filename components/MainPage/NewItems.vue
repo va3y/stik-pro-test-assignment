@@ -49,7 +49,7 @@ h2 {
   content: '';
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
 

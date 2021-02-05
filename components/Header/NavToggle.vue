@@ -35,11 +35,8 @@ export default {
 }
 
 .nav-toggle-cross {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 25px;
-  width: 30px;
+  height: 20px;
+  width: 25px;
   cursor: pointer;
 }
 
