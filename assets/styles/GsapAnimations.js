@@ -15,6 +15,9 @@ const pageOpen = function () {
 
 const loadParallax = function () {
   gsap.registerPlugin(ScrollTrigger)
+  console.log('I am loading the scroll lib!')
+
+  console.log('It is: ', ScrollTrigger)
   gsap.to('.banner', {
     backgroundPositionY: `200px`,
     scrollTrigger: {
